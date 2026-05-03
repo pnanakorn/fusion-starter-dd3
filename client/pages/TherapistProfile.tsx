@@ -90,7 +90,7 @@ export default function TherapistProfile() {
 
   function saveEdit() {
     setName(draftName.trim() || name);
-    setEmail(draftEmail.trim() || e                 mail);
+    setEmail(draftEmail.trim() || email);
     setSpecialty(draftSpecialty.trim() || specialty);
     setEditOpen(false);
   }
