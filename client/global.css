@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 138 41% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 138 41% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 138 41% 9%;
+
+    --primary: 145 97% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 126 60% 94%;
+    --secondary-foreground: 145 97% 22%;
+
+    --muted: 126 60% 94%;
+    --muted-foreground: 125 8% 44%;
+
+    --accent: 126 60% 94%;
+    --accent-foreground: 145 97% 22%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 125 42% 86%;
+    --input: 125 42% 86%;
+    --ring: 145 97% 22%;
+
+    --radius: 1rem;
+
+    /* Turnlea brand */
+    --brand-dark: 162 81% 17%;
+    --brand-green: 145 97% 22%;
+    --brand-light-green: 126 87% 79%;
+    --brand-pale: 120 100% 96%;
+    --brand-input-bg: 126 78% 93%;
+    --brand-placeholder: 122 14% 77%;
+    --brand-text-dark: 138 41% 9%;
+    --brand-text-muted: 125 8% 35%;
+    --brand-divider: 125 42% 86%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
